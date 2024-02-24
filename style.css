@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: bisque;
+    overflow: hidden;
+}
+
+.main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.bat {
+    height: 400px;
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 500px;
+    animation: batting 1s ease-out infinite;
+    transform-origin: top;
+}
+
+.ball {
+    position: absolute;
+    height: 6vh;
+    margin-top: 200px;
+    margin-left: 100px;
+    animation: bowling 1s ease-in infinite;
+}
+
+.six {
+    margin-left: 400px;
+    margin-top: 450px;
+    width: 150px;
+    animation: sixfocus 2s  1s infinite 
+}
+
+@keyframes batting {
+    0% { transform: rotate(0);}
+
+    50% { transform: rotate(-40deg);}
+
+    100% { transform: rotate(80deg);}
+}
+
+@keyframes bowling {
+    0% { transform: translate(0); }
+
+    50% { margin-top: 350px; transform: translate(560px); }
+
+    100% { margin-top: -100px; transform: translate(-400); }
+}
+
+
+@keyframes sixfocus {
+    0% { transform: scale(0);}
+
+    100% { transform: scale(150px);}
+}
